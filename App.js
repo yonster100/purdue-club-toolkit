@@ -1,20 +1,35 @@
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
+import { AuthProvider, useAuth } from './src/context/AuthContext';
+import AppNavigator from './src/navigation/AppNavigator';
+import AuthNavigator from './src/navigation/AuthNavigator';
+
+function RootNavigator() {
+  const { currentUser, isLoading } = useAuth();
+
+  if (isLoading) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#8E6F3E' }}>
+        <ActivityIndicator size="large" color="#CEB888" />
+      </View>
+    );
+  }
+
+  return currentUser ? <AppNavigator /> : <AuthNavigator />;
+}
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <AuthProvider>
+        <NavigationContainer>
+          <StatusBar style="light" />
+          <RootNavigator />
+        </NavigationContainer>
+      </AuthProvider>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
