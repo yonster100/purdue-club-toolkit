@@ -13,17 +13,25 @@
       "backgroundColor": "#8E6F3E"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yonster100.purdueclubtoolkit"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#8E6F3E"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.yonster100.purdueclubtoolkit"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ea3de616-a569-4302-9034-a177539a42a0"
+      }
+    },
+    "owner": "yonster100"
   }
 }
