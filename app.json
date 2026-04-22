@@ -32,6 +32,12 @@
         "projectId": "ea3de616-a569-4302-9034-a177539a42a0"
       }
     },
-    "owner": "yonster100"
+    "owner": "yonster100",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ea3de616-a569-4302-9034-a177539a42a0"
+    }
   }
 }
