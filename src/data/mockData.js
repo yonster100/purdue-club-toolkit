@@ -1,3 +1,8 @@
+// Mock data for the Purdue Club Toolkit demo.
+// Mix of real Purdue orgs (NSBE, Habitat for Humanity, PSUB, SWE) and
+// plausible-sounding made-up clubs. Kept intentionally casual so it reads
+// like students wrote it, not a marketing team.
+
 export const clubs = [
   {
     id: 'c1',
@@ -86,7 +91,7 @@ export const clubs = [
     logo: 'https://ui-avatars.com/api/?name=DSC&background=3F51B5&color=fff&size=128',
     description: 'Exploring data science, machine learning, and analytics.',
     memberCount: 110,
-    category: 'Engineering',
+    category: 'Technology',
     upcomingEvents: 1,
   },
   {
@@ -108,6 +113,15 @@ export const clubs = [
     upcomingEvents: 2,
   },
   {
+    id: 'c13',
+    name: 'BoilerChain Club',
+    logo: 'https://ui-avatars.com/api/?name=BC&background=FF6F00&color=fff&size=128',
+    description: 'Purdue\'s blockchain and Web3 club — exploring decentralized technology, smart contracts, and crypto innovation.',
+    memberCount: 68,
+    category: 'Technology',
+    upcomingEvents: 1,
+  },
+  {
     id: 'c14',
     name: 'Gordon Parks Photography Group',
     logo: 'https://ui-avatars.com/api/?name=GP&background=37474F&color=fff&size=128',
@@ -117,16 +131,19 @@ export const clubs = [
     upcomingEvents: 2,
   },
   {
-    id: 'c13',
-    name: 'BoilerChain Club',
-    logo: 'https://ui-avatars.com/api/?name=BC&background=FF6F00&color=fff&size=128',
-    description: 'Purdue\'s blockchain and Web3 club — exploring decentralized technology, smart contracts, and crypto innovation.',
-    memberCount: 68,
-    category: 'Technology',
-    upcomingEvents: 1,
+    id: 'c15',
+    name: 'Society of Women Engineers',
+    logo: 'https://ui-avatars.com/api/?name=SWE&background=7B1FA2&color=fff&size=128',
+    description: 'Empowering women in engineering through mentorship, professional development, and outreach across campus and West Lafayette K-12 schools.',
+    memberCount: 210,
+    category: 'Engineering',
+    upcomingEvents: 3,
   },
 ];
 
+// NOTE: Keys `brooklyn` and `yoni` are required by AuthContext for the
+// built-in demo login accounts. The rest are realistic filler students so
+// member lists / DMs / profile browsing don't feel empty in the demo.
 export const users = {
   brooklyn: {
     id: 'u1',
@@ -134,7 +151,7 @@ export const users = {
     email: 'bfruecht@purdue.edu',
     password: 'demo',
     avatar: 'https://ui-avatars.com/api/?name=Brooklyn+Fruechte&background=CEB888&color=fff&size=128',
-    interests: ['Engineering', 'Robotics', 'Coding', 'Artificial Intelligence'],
+    interests: ['Engineering', 'Science', 'Technology', 'Arts'],
     year: 'Junior',
     major: 'Computer Science',
     messageCount: 5,
@@ -160,7 +177,93 @@ export const users = {
       { clubId: 'c14', role: 'Member', joinDate: '2025-10-01' },
     ],
   },
+  maya: {
+    id: 'u3',
+    name: 'Maya Patel',
+    email: 'mpatel47@purdue.edu',
+    avatar: 'https://ui-avatars.com/api/?name=Maya+Patel&background=E91E63&color=fff&size=128',
+    interests: ['Engineering', 'Health', 'Community Service', 'Science'],
+    year: 'Junior',
+    major: 'Biomedical Engineering',
+    memberships: [
+      { clubId: 'c11', role: 'Treasurer', joinDate: '2024-08-25' },
+      { clubId: 'c15', role: 'Outreach Chair', joinDate: '2024-08-25' },
+      { clubId: 'c6', role: 'Member', joinDate: '2025-01-12' },
+    ],
+  },
+  tyler: {
+    id: 'u4',
+    name: 'Tyler Reinhardt',
+    email: 'treinhar@purdue.edu',
+    avatar: 'https://ui-avatars.com/api/?name=Tyler+Reinhardt&background=4CAF50&color=fff&size=128',
+    interests: ['Science', 'Community Service', 'Business'],
+    year: 'Sophomore',
+    major: 'Agribusiness',
+    memberships: [
+      { clubId: 'c1', role: 'Vice President', joinDate: '2024-09-03' },
+      { clubId: 'c7', role: 'Member', joinDate: '2024-09-03' },
+      { clubId: 'c12', role: 'Member', joinDate: '2025-01-20' },
+    ],
+  },
+  jordan: {
+    id: 'u5',
+    name: 'Jordan Kim',
+    email: 'kim2103@purdue.edu',
+    avatar: 'https://ui-avatars.com/api/?name=Jordan+Kim&background=607D8B&color=fff&size=128',
+    interests: ['Engineering', 'Technology', 'Sports'],
+    year: 'Senior',
+    major: 'Mechanical Engineering',
+    memberships: [
+      { clubId: 'c4', role: 'President', joinDate: '2023-08-20' },
+      { clubId: 'c5', role: 'Member', joinDate: '2024-01-14' },
+      { clubId: 'c6', role: 'Member', joinDate: '2023-08-20' },
+    ],
+  },
+  amara: {
+    id: 'u6',
+    name: 'Amara Okonkwo',
+    email: 'aokonkwo@purdue.edu',
+    avatar: 'https://ui-avatars.com/api/?name=Amara+Okonkwo&background=6A1B9A&color=fff&size=128',
+    interests: ['Health', 'Community Service', 'Culture', 'Music'],
+    year: 'Sophomore',
+    major: 'Nursing',
+    memberships: [
+      { clubId: 'c11', role: 'Secretary', joinDate: '2024-08-28' },
+      { clubId: 'c12', role: 'Events Coordinator', joinDate: '2024-08-28' },
+    ],
+  },
+  diego: {
+    id: 'u7',
+    name: 'Diego Ramirez',
+    email: 'dramire3@purdue.edu',
+    avatar: 'https://ui-avatars.com/api/?name=Diego+Ramirez&background=FF6F00&color=fff&size=128',
+    interests: ['Engineering', 'Business', 'Technology'],
+    year: 'Senior',
+    major: 'Industrial Engineering',
+    memberships: [
+      { clubId: 'c8', role: 'President', joinDate: '2023-08-22' },
+      { clubId: 'c9', role: 'Member', joinDate: '2024-01-18' },
+      { clubId: 'c13', role: 'Member', joinDate: '2024-09-10' },
+    ],
+  },
+  sophie: {
+    id: 'u8',
+    name: 'Sophie Chen',
+    email: 'chen1842@purdue.edu',
+    avatar: 'https://ui-avatars.com/api/?name=Sophie+Chen&background=3F51B5&color=fff&size=128',
+    interests: ['Business', 'Technology', 'Arts', 'Media'],
+    year: 'Freshman',
+    major: 'Supply Chain & Sales Management',
+    memberships: [
+      { clubId: 'c8', role: 'Member', joinDate: '2025-08-30' },
+      { clubId: 'c10', role: 'Member', joinDate: '2025-09-12' },
+      { clubId: 'c14', role: 'Member', joinDate: '2025-10-04' },
+    ],
+  },
 };
+
+// Convenience: array form for list rendering (member directories, search, etc.)
+export const allStudents = Object.values(users).map(({ password, ...rest }) => rest);
 
 export function getUserMemberships(user) {
   return user.memberships.map((m) => ({
@@ -173,21 +276,39 @@ export function getClubById(id) {
   return clubs.find((c) => c.id === id);
 }
 
+export function getStudentById(id) {
+  return allStudents.find((s) => s.id === id);
+}
+
+export function getClubMembers(clubId) {
+  return allStudents
+    .filter((s) => s.memberships.some((m) => m.clubId === clubId))
+    .map((s) => ({
+      ...s,
+      role: s.memberships.find((m) => m.clubId === clubId).role,
+    }));
+}
+
 export const interests = [
   { id: 'i1', name: 'Engineering', icon: 'construct' },
   { id: 'i2', name: 'Business', icon: 'briefcase' },
   { id: 'i3', name: 'Science', icon: 'flask' },
   { id: 'i4', name: 'Arts', icon: 'color-palette' },
-  { id: 'i5', name: 'Sports', icon: 'football' },
-  { id: 'i6', name: 'Technology', icon: 'hardware-chip' },
+  { id: 'i5', name: 'Sports', icon: 'basketball' },
+  { id: 'i6', name: 'Technology', icon: 'code-slash' },
   { id: 'i7', name: 'Community Service', icon: 'heart' },
   { id: 'i8', name: 'Music', icon: 'musical-notes' },
   { id: 'i9', name: 'Health', icon: 'fitness' },
   { id: 'i10', name: 'Culture', icon: 'earth' },
   { id: 'i11', name: 'Media', icon: 'videocam' },
   { id: 'i12', name: 'Politics', icon: 'megaphone' },
+  { id: 'i13', name: 'Gaming', icon: 'game-controller' },
+  { id: 'i14', name: 'Food', icon: 'restaurant' },
+  { id: 'i15', name: 'Travel', icon: 'airplane' },
 ];
 
+// Club-level announcements / polls / tagged messages that render in ChatScreen.
+// Shape is consumed by ChatScreen.js (type: 'text' | 'poll' | 'tagged').
 export const chatMessages = [
   {
     id: 'm1',
@@ -279,8 +400,101 @@ export const chatMessages = [
     timestamp: '2026-03-23T12:00:00',
     isGroupMessage: true,
   },
+  {
+    id: 'm10',
+    clubId: 'c11',
+    type: 'poll',
+    sender: 'NSBE',
+    text: 'What should we do for the end-of-semester social?',
+    pollOptions: [
+      { id: 'p4', text: 'Bowling at UBowl', votes: 28 },
+      { id: 'p5', text: 'Cookout at Horticulture Park', votes: 41 },
+      { id: 'p6', text: 'Movie + dinner at PMU', votes: 19 },
+    ],
+    pollEnds: '4/02',
+    timestamp: '2026-03-24T17:15:00',
+    isGroupMessage: true,
+  },
+  {
+    id: 'm11',
+    clubId: 'c15',
+    type: 'text',
+    sender: 'Society of Women Engineers',
+    text: 'Outreach volunteers needed for Klondike Elementary STEM Day this Saturday! Sign-up link in the SWE GroupMe.',
+    timestamp: '2026-03-24T08:30:00',
+    isGroupMessage: true,
+  },
 ];
 
+// Student-to-student DM conversations. Not consumed by ChatScreen yet — this is
+// filler so a future Messages/DM screen has realistic data to render.
+export const conversations = [
+  {
+    id: 'conv1',
+    participantIds: ['u2', 'u3'], // Yoni & Maya
+    lastUpdated: '2026-03-24T21:42:00',
+    messages: [
+      { id: 'dm1-1', senderId: 'u3', text: 'yo did u see the email about the NSBE conference funding?', timestamp: '2026-03-24T19:04:00' },
+      { id: 'dm1-2', senderId: 'u2', text: 'yeah just read it. $250 after subsidy is actually not bad', timestamp: '2026-03-24T19:07:00' },
+      { id: 'dm1-3', senderId: 'u3', text: 'fr. we should push the interest form hard at GBM thursday', timestamp: '2026-03-24T19:08:00' },
+      { id: 'dm1-4', senderId: 'u2', text: 'bet. i can make the slide if u want to present it', timestamp: '2026-03-24T19:10:00' },
+      { id: 'dm1-5', senderId: 'u3', text: 'deal. also r u free friday to work on the study night flyer', timestamp: '2026-03-24T19:11:00' },
+      { id: 'dm1-6', senderId: 'u2', text: 'after 4 yes. WALC?', timestamp: '2026-03-24T19:12:00' },
+      { id: 'dm1-7', senderId: 'u3', text: 'WALC gets crazy fri afternoon lol lets do hicks 3rd floor', timestamp: '2026-03-24T19:14:00' },
+      { id: 'dm1-8', senderId: 'u2', text: 'true true. hicks it is', timestamp: '2026-03-24T19:14:00' },
+      { id: 'dm1-9', senderId: 'u3', text: 'also did u submit the BOSO thing for the mixer yet?', timestamp: '2026-03-24T21:38:00' },
+      { id: 'dm1-10', senderId: 'u2', text: 'finishing it tonight. deadline is literally tmrw 💀', timestamp: '2026-03-24T21:42:00' },
+    ],
+  },
+  {
+    id: 'conv2',
+    participantIds: ['u1', 'u5'], // Brooklyn & Jordan
+    lastUpdated: '2026-03-23T22:15:00',
+    messages: [
+      { id: 'dm2-1', senderId: 'u1', text: 'hey! hort society is doing a plant swap with robotics club this month, you down?', timestamp: '2026-03-23T17:20:00' },
+      { id: 'dm2-2', senderId: 'u5', text: 'wait plant swap with robotics?? how did that collab happen 😂', timestamp: '2026-03-23T17:25:00' },
+      { id: 'dm2-3', senderId: 'u1', text: 'long story. someone in ARC has like 40 succulents and wants to get rid of half', timestamp: '2026-03-23T17:26:00' },
+      { id: 'dm2-4', senderId: 'u5', text: 'ok now im in. when', timestamp: '2026-03-23T17:28:00' },
+      { id: 'dm2-5', senderId: 'u1', text: 'thinking 4/5 in LILY lobby. afternoon ish', timestamp: '2026-03-23T17:30:00' },
+      { id: 'dm2-6', senderId: 'u5', text: 'that works. ill tell the ARC gc', timestamp: '2026-03-23T17:31:00' },
+      { id: 'dm2-7', senderId: 'u1', text: 'ty ty. also did u figure out the CAD thing u were stuck on', timestamp: '2026-03-23T22:10:00' },
+      { id: 'dm2-8', senderId: 'u5', text: 'finally yes. it was the mate constraint being flipped the whole time lol', timestamp: '2026-03-23T22:12:00' },
+      { id: 'dm2-9', senderId: 'u1', text: 'classic. glad its working', timestamp: '2026-03-23T22:13:00' },
+      { id: 'dm2-10', senderId: 'u5', text: 'ty for asking seriously. see u at the swap 🌱', timestamp: '2026-03-23T22:15:00' },
+    ],
+  },
+  {
+    id: 'conv3',
+    participantIds: ['u4', 'u6'], // Tyler & Amara
+    lastUpdated: '2026-03-22T07:58:00',
+    messages: [
+      { id: 'dm3-1', senderId: 'u4', text: 'u going to habitat build day sat?', timestamp: '2026-03-21T20:14:00' },
+      { id: 'dm3-2', senderId: 'u6', text: 'yeah! do u have a ride or are we carpooling', timestamp: '2026-03-21T20:16:00' },
+      { id: 'dm3-3', senderId: 'u4', text: 'i can drive. i live in hillenbrand', timestamp: '2026-03-21T20:17:00' },
+      { id: 'dm3-4', senderId: 'u6', text: 'perfect im in earhart. can u swing by at like 7:30?', timestamp: '2026-03-21T20:19:00' },
+      { id: 'dm3-5', senderId: 'u4', text: 'yep. meet out front by the circle', timestamp: '2026-03-21T20:20:00' },
+      { id: 'dm3-6', senderId: 'u6', text: 'bet. what should i bring besides water', timestamp: '2026-03-21T20:22:00' },
+      { id: 'dm3-7', senderId: 'u4', text: 'closed toe shoes, pants u dont care about, sunscreen. snacks if u want lol', timestamp: '2026-03-21T20:24:00' },
+      { id: 'dm3-8', senderId: 'u6', text: 'ty will do. also r we counting this for nsbe community service hours', timestamp: '2026-03-22T07:50:00' },
+      { id: 'dm3-9', senderId: 'u4', text: 'should be able to. have habitat sign a slip and turn it in', timestamp: '2026-03-22T07:55:00' },
+      { id: 'dm3-10', senderId: 'u6', text: 'love that. ok see u sat 🙏', timestamp: '2026-03-22T07:58:00' },
+    ],
+  },
+];
+
+export function getConversationsForUser(userId) {
+  return conversations
+    .filter((c) => c.participantIds.includes(userId))
+    .map((c) => ({
+      ...c,
+      otherParticipants: c.participantIds
+        .filter((pid) => pid !== userId)
+        .map((pid) => getStudentById(pid)),
+    }));
+}
+
+// Calendar events — all locations are real Purdue buildings
+// (PMU, WALC, Stewart Center, Hampton, ARMS, LWSN, LILY, KNOY, RAWLS, HICKS, ME).
 export const events = [
   {
     id: 'e1',
@@ -435,6 +649,60 @@ export const events = [
     location: 'Purdue Memorial Mall',
     description: 'Friday evening photo walk — street and architecture theme.',
   },
+  {
+    id: 'e18',
+    title: 'SWE x NSBE Networking Mixer',
+    clubId: 'c15',
+    date: '2026-04-20',
+    time: '5:30 PM',
+    location: 'PMU North Ballroom',
+    description: 'Joint mixer with Lockheed, Cummins, and Eli Lilly recruiters. Business casual.',
+  },
+  {
+    id: 'e19',
+    title: 'SWE K-12 STEM Outreach',
+    clubId: 'c15',
+    date: '2026-03-28',
+    time: '9:00 AM',
+    location: 'Klondike Elementary',
+    description: 'Volunteer morning running STEM activities with local elementary students.',
+  },
+  {
+    id: 'e20',
+    title: 'Data Science Club Kaggle Night',
+    clubId: 'c10',
+    date: '2026-04-09',
+    time: '7:00 PM',
+    location: 'LWSN 3102AB',
+    description: 'Team up and submit to an active Kaggle competition. Pizza included.',
+  },
+  {
+    id: 'e21',
+    title: 'PSUB Spring Concert',
+    clubId: 'c3',
+    date: '2026-04-26',
+    time: '8:00 PM',
+    location: 'Elliott Hall of Music',
+    description: 'Annual PSUB-hosted spring concert. Student ID required for entry.',
+  },
+  {
+    id: 'e22',
+    title: 'Entrepreneurship Club Pitch Night',
+    clubId: 'c9',
+    date: '2026-04-22',
+    time: '6:30 PM',
+    location: 'Stewart Center 214',
+    description: '5-minute startup pitches from members. Alumni VCs in attendance.',
+  },
+  {
+    id: 'e23',
+    title: 'RoboMaster Build Session',
+    clubId: 'c5',
+    date: '2026-04-06',
+    time: '3:00 PM',
+    location: 'Hampton Hall B082',
+    description: 'Open build session for the defense bot subteam. All members welcome.',
+  },
 ];
 
 export const notifications = [
@@ -446,6 +714,8 @@ export const notifications = [
   { id: 'n6', title: 'NSBE General Body Meeting', body: 'Thursday at 6 PM in ARMS 1010', read: false, timestamp: '2026-03-23T10:00:00' },
   { id: 'n7', title: 'Habitat Build Day Saturday', body: 'Meet at Co-Rec parking lot at 8 AM', read: false, timestamp: '2026-03-22T09:00:00' },
   { id: 'n8', title: 'BoilerChain Workshop', body: 'Solidity smart contracts — Wednesday 7 PM', read: true, timestamp: '2026-03-21T15:00:00' },
+  { id: 'n9', title: 'Message from Maya Patel', body: 'finishing it tonight. deadline is literally tmrw 💀', read: false, timestamp: '2026-03-24T21:42:00' },
+  { id: 'n10', title: 'SWE outreach signup', body: 'Klondike Elementary STEM Day — Saturday morning', read: false, timestamp: '2026-03-24T08:30:00' },
 ];
 
 export const resourceTools = [
@@ -471,6 +741,7 @@ export let bulletins = [
     pinned: true,
     likes: 24,
     comments: 8,
+    tags: ['SAO', 'deadline', 'registration'],
   },
   {
     id: 'b2',
@@ -485,6 +756,7 @@ export let bulletins = [
     pinned: true,
     likes: 15,
     comments: 3,
+    tags: ['BOSO', 'funding', 'deadline'],
   },
   {
     id: 'b3',
@@ -499,6 +771,7 @@ export let bulletins = [
     pinned: false,
     likes: 9,
     comments: 1,
+    tags: ['SAO', 'officers', 'training'],
   },
   {
     id: 'b4',
@@ -513,6 +786,7 @@ export let bulletins = [
     pinned: true,
     likes: 38,
     comments: 12,
+    tags: ['NSBE', 'conference', 'travel'],
   },
   {
     id: 'b5',
@@ -527,6 +801,7 @@ export let bulletins = [
     pinned: false,
     likes: 22,
     comments: 5,
+    tags: ['NSBE', 'study', 'midterms'],
   },
   {
     id: 'b6',
@@ -541,6 +816,7 @@ export let bulletins = [
     pinned: false,
     likes: 45,
     comments: 9,
+    tags: ['NSBE', 'SWE', 'networking'],
   },
   {
     id: 'b7',
@@ -555,6 +831,7 @@ export let bulletins = [
     pinned: false,
     likes: 5,
     comments: 2,
+    tags: ['SAO', 'policy', '25Live'],
   },
   {
     id: 'b8',
@@ -569,6 +846,7 @@ export let bulletins = [
     pinned: false,
     likes: 18,
     comments: 4,
+    tags: ['volunteer', 'habitat', 'service hours'],
   },
   {
     id: 'b9',
@@ -583,6 +861,7 @@ export let bulletins = [
     pinned: false,
     likes: 27,
     comments: 6,
+    tags: ['blockchain', 'demo day', 'prizes'],
   },
   {
     id: 'b10',
@@ -597,6 +876,7 @@ export let bulletins = [
     pinned: false,
     likes: 31,
     comments: 14,
+    tags: ['NSBE', 'contest', 'design'],
   },
   {
     id: 'b11',
@@ -611,6 +891,7 @@ export let bulletins = [
     pinned: false,
     likes: 12,
     comments: 3,
+    tags: ['PSUB', 'club fair', 'recruitment'],
   },
   {
     id: 'b12',
@@ -625,6 +906,52 @@ export let bulletins = [
     pinned: false,
     likes: 16,
     comments: 7,
+    tags: ['photography', 'gallery', 'Stewart Center'],
+  },
+  {
+    id: 'b13',
+    title: 'SWE Outreach — Klondike Elementary STEM Day',
+    body: 'SWE is running our annual STEM Day at Klondike Elementary on Saturday, March 28 from 9 AM – 12 PM! We still need 8 more volunteers to help run activities (paper airplanes, egg drop, simple circuits).\n\nNo engineering major required, just enthusiasm and willingness to work with 3rd–5th graders. Breakfast provided at PMU before we head over.\n\nSign up via the SWE GroupMe or email Maya.',
+    author: 'Maya Patel',
+    authorId: 'u3',
+    clubId: 'c15',
+    category: 'volunteer',
+    date: '2026-03-24',
+    priority: 'medium',
+    pinned: false,
+    likes: 21,
+    comments: 4,
+    tags: ['SWE', 'outreach', 'K-12'],
+  },
+  {
+    id: 'b14',
+    title: 'Free Tutoring at the Bell Tower — Finals Week',
+    body: 'The Academic Success Center is partnering with student orgs to offer drop-in tutoring under the Bell Tower during finals week (April 27 – May 1), weather permitting, otherwise WALC atrium.\n\nSubjects covered: Calc 1/2, Physics 172, CS 180, Econ 251.\n\nWalk up any time between 1 PM – 8 PM. Free coffee and donuts starting at 3.',
+    author: 'Academic Success Center',
+    authorId: null,
+    clubId: null,
+    category: 'announcement',
+    date: '2026-03-26',
+    priority: 'low',
+    pinned: false,
+    likes: 44,
+    comments: 11,
+    tags: ['finals', 'tutoring', 'ASC'],
+  },
+  {
+    id: 'b15',
+    title: 'Lost & Found: Engineering Fountain',
+    body: 'A silver Macbook Pro in a blue Patagonia sleeve was found by the Engineering Fountain on Sunday afternoon. It\'s currently at the PMU Info Desk.\n\nStop by with your Purdue ID to claim. Please share with your friends in case they\'re looking!',
+    author: 'PMU Info Desk',
+    authorId: null,
+    clubId: null,
+    category: 'announcement',
+    date: '2026-03-23',
+    priority: 'low',
+    pinned: false,
+    likes: 3,
+    comments: 2,
+    tags: ['lost & found', 'PMU'],
   },
 ];
 
