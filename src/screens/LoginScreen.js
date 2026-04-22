@@ -127,7 +127,7 @@ export default function LoginScreen({ navigation }) {
           <View style={styles.demoHint}>
             <Ionicons name="information-circle-outline" size={16} color={colors.textMuted} />
             <Text style={styles.demoHintText}>
-              Demo: demo@purdue.edu / demo
+              Demo: bfruecht@purdue.edu / demo
             </Text>
           </View>
         </View>
