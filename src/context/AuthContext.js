@@ -30,6 +30,14 @@ export function AuthProvider({ children }) {
       allAccounts[users.brooklyn.email] = users.brooklyn;
       allAccounts[users.yoni.email] = users.yoni;
 
+      // Public demo account — same profile/data as yghansah, different credentials.
+      // Reuses Yoni's id so memberships, bulletins, and DMs resolve identically.
+      allAccounts['demo@purdue.edu'] = {
+        ...users.yoni,
+        email: 'demo@purdue.edu',
+        password: 'demo',
+      };
+
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(allAccounts));
       setAccounts(allAccounts);
 
@@ -56,6 +64,18 @@ export function AuthProvider({ children }) {
     );
     if (builtIn && builtIn.password === password) {
       setCurrentUser(builtIn);
+      await AsyncStorage.setItem(SESSION_KEY, JSON.stringify(normalizedEmail));
+      return;
+    }
+
+    // Public demo account — mirrors yghansah's data
+    if (normalizedEmail === 'demo@purdue.edu' && password === 'demo') {
+      const demoUser = {
+        ...users.yoni,
+        email: 'demo@purdue.edu',
+        password: 'demo',
+      };
+      setCurrentUser(demoUser);
       await AsyncStorage.setItem(SESSION_KEY, JSON.stringify(normalizedEmail));
       return;
     }
